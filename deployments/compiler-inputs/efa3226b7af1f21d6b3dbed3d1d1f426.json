@@ -1,0 +1,535 @@
+{
+	"id": "efa3226b7af1f21d6b3dbed3d1d1f426",
+	"input": {
+		"sources": {
+			"src/HelloSphinx.sol": {
+				"content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract HelloSphinx {\n    string public greeting;\n    uint public number;\n\n    constructor(string memory _greeting, uint _number) {\n        greeting = _greeting;\n        number = _number;\n    }\n\n    function add(uint256 _myNumber) public {\n        number += _myNumber;\n    }\n  }\n"
+			}
+		},
+		"language": "Solidity",
+		"settings": {
+			"metadata": {
+				"appendCBOR": true,
+				"bytecodeHash": "ipfs",
+				"useLiteralContent": false
+			},
+			"libraries": {},
+			"optimizer": {
+				"runs": 200,
+				"enabled": true
+			},
+			"evmVersion": "paris",
+			"remappings": [
+				"forge-std/=node_modules/forge-std/src/",
+				"ds-test/=node_modules/ds-test/src/",
+				"@sphinx-labs/plugins/=node_modules/@sphinx-labs/plugins/contracts/foundry/",
+				"@sphinx-labs/contracts/=node_modules/@sphinx-labs/contracts/",
+				"sphinx-forge-std/=node_modules/sphinx-forge-std/src/",
+				"sphinx-solmate/=node_modules/sphinx-solmate/src/",
+				"@eth-optimism/=node_modules/@eth-optimism/",
+				"@gnosis.pm/=node_modules/@gnosis.pm/",
+				"@openzeppelin/=node_modules/@openzeppelin/",
+				"hardhat/=node_modules/hardhat/",
+				"solmate/=node_modules/solmate/"
+			],
+			"outputSelection": {
+				"src/HelloSphinx.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"test/HelloSphinx.t.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"script/HelloSphinx.s.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/ds-test/src/test.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/forge-std/src/Vm.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/forge-std/src/Base.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/forge-std/src/Test.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/forge-std/src/Script.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/forge-std/src/StdJson.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/forge-std/src/StdMath.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/forge-std/src/console.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/forge-std/src/StdError.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/forge-std/src/StdStyle.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/forge-std/src/StdUtils.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/forge-std/src/console2.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/forge-std/src/StdChains.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/forge-std/src/StdCheats.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/sphinx-forge-std/src/Vm.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/forge-std/src/StdStorage.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/forge-std/src/safeconsole.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/forge-std/src/StdInvariant.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/forge-std/src/StdAssertions.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/sphinx-forge-std/src/StdUtils.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/forge-std/src/interfaces/IMulticall3.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/sphinx-forge-std/src/interfaces/IMulticall3.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/@sphinx-labs/plugins/contracts/foundry/Sphinx.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/@sphinx-labs/plugins/contracts/foundry/SphinxPlugin.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/@sphinx-labs/contracts/contracts/foundry/SphinxUtils.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/@sphinx-labs/contracts/contracts/core/SphinxDataTypes.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/@sphinx-labs/contracts/contracts/foundry/SphinxConstants.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/@sphinx-labs/contracts/contracts/foundry/interfaces/IEnum.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/@sphinx-labs/contracts/contracts/foundry/SphinxPluginTypes.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/@sphinx-labs/contracts/contracts/core/interfaces/ISphinxModule.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/@sphinx-labs/contracts/contracts/foundry/interfaces/IMultiSend.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/@sphinx-labs/contracts/contracts/foundry/interfaces/IGnosisSafe.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/@sphinx-labs/contracts/contracts/foundry/interfaces/IGnosisSafeProxy.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/@sphinx-labs/contracts/contracts/core/interfaces/ISphinxModuleProxyFactory.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				},
+				"node_modules/@sphinx-labs/contracts/contracts/foundry/interfaces/IGnosisSafeProxyFactory.sol": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"metadata",
+						"storageLayout"
+					]
+				}
+			}
+		}
+	},
+	"solcVersion": "0.8.23",
+	"solcLongVersion": "0.8.23+commit.f704f362"
+}
